@@ -18,3 +18,18 @@ class Solution:
            a.next = ListNode(i)
            a=a.next
         return dummy.next
+
+###OR###
+
+        prehead = ListNode(0)
+        prev = prehead
+        while l1 and l2:
+            if l1<=l2:
+                prev.next = l1.val
+                l1=l1.next
+            else:
+                prev.next = l2.val
+                l2=l2.next
+            prev = prev.next
+        prev.next = l1 if l1 is not None else l2
+        return prehead.next
