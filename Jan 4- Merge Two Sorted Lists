@@ -21,7 +21,7 @@ class Solution:
 
 ###OR###
 
-        prehead = ListNode(0)
+        prehead = ListNode(-1)
         prev = prehead
         while l1 and l2:
             if l1<=l2:
