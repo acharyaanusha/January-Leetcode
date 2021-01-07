@@ -13,3 +13,16 @@ class Solution:
                     res.remove(s[left])
                     left+=1
         return longest
+        
+        ###OR###
+        
+        res = []
+        length = 0
+        for i in s:
+              if i in res:
+                    index = res.index(i)
+                    length = max(length,len(res))
+                    res = res[index+1:]
+              res.append(i)
+        length = max(length,len(res))
+        return length
