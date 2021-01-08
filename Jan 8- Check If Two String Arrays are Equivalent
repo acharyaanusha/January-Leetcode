@@ -9,3 +9,7 @@ class Solution:
         if s1==s2:
             return True
         return False
+
+###OR###
+        
+        return "".join(word1) == "".join(word2)
